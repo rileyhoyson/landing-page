@@ -12,9 +12,32 @@
     background-color: rgb(19, 19, 19);
 }
 
+h1,
+.logo,
+.flex-item.one {
+    font-family: "Red Hat Display", Verdana, sans-serif;
+}
+
 .container {
     height: 50vh;
     /* border: medium solid green; */
+}
+
+.container.one {
+    height: calc(50vh + 80px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container.two {
+    height: calc(50vh - 60px);
+}
+
+.container.three {
+    height: calc(50vh + 60px);
+}
+
+.container.four {
+    height: calc(50vh - 60px);
 }
 
 .flex-container {
@@ -29,7 +52,7 @@
 }
 
 .flex-container.one {
-    height: calc(100% - 70px);
+    height: calc(100% - 62px);
     background-color: rgb(35, 35, 35);
     justify-content: center;
     
@@ -43,7 +66,6 @@
     max-width:50%;
     display: flex;
     justify-content: center;
-    /* margin-left: auto; */
 }
 
 .flex-container.one img {
@@ -54,7 +76,7 @@
 }
 
 .flex-container.two {
-    height: 100%
+    height: 100%;
 }
 
 .nav,
@@ -77,12 +99,13 @@
 
 .nav-link {
     display: flex;
-    gap: 4em;
+    gap: 2em;
 }
 
 .nav-link a {
     font-weight: 400;
     font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .nav,
@@ -106,8 +129,17 @@
 button {
     background-color: blue;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     margin-top: 1em;
     font-size: 18px;
-    padding: 12px;
+    padding: 12px 18px 12px 18px;
+}
+
+.badge {
+    background-color: #dc3545;
+    border-radius: 25px;
+    padding: 4px;
+    font-weight: 600;
+    font-size: 8px;
+    margin-left: 4px;
 }
