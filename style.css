@@ -26,6 +26,7 @@ h1,
 .container.one {
     height: calc(50vh + 80px);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgb(35, 35, 35);
 }
 
 .container.two {
@@ -38,6 +39,7 @@ h1,
 
 .container.four {
     height: calc(50vh - 80px);
+    background-color: rgb(35, 35, 35);
 }
 
 .flex-container {
@@ -53,7 +55,6 @@ h1,
 
 .flex-container.one {
     height: calc(100% - 62px);
-    background-color: rgb(35, 35, 35);
     justify-content: center;
     padding-bottom: 20px;
 }
@@ -82,7 +83,9 @@ h1,
 }
 
 .flex-container.three {
-    height: 100%;
+    height: calc(100% - 80px);
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .nav,
@@ -122,15 +125,27 @@ h1,
 .header {
     padding-top: 40px;
     text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Red Hat Display", Verdana, sans-serif;
 }
 
 .footer {
     align-self: end;
+    background-color: black;
 }
 
 .flex-item {
     /* border: medium solid blue; */
     flex: 1 1 auto;
+}
+
+.flex-item.card,
+.testimonial {
+    border-radius: 25px;  
+    background-color: rgba(255, 255, 255, 0.162);  
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(152, 152, 168, 0.2) 0px 7px 29px 0px;
 }
 
 .flex-item.card {
@@ -139,31 +154,42 @@ h1,
     height: 200px;
     max-height: 200px;
     overflow: hidden;
-    border-radius: 25px;  
-    background-color: rgba(255, 255, 255, 0.42);  
-    backdrop-filter: blur(5px);
-    box-shadow: rgba(152, 152, 168, 0.2) 0px 7px 29px 0px;
+}
 
-    font-size: 18px; 
+
+.testimonial {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-text {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+    color: #8f8f8f;
+    max-width: 60%;
+}
+
+.card-text span {
+    padding-top: .5em;
+    padding-right: 1em;
+    float: right;
+    font-style:normal;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .card img {
-    color: black;
-    font-weight: 800;
-    font-family: "Red Hat Display", Verdana, sans-serif;
     height: auto;
     width: 400px;
-    /* -webkit-clip-path: inset(30px 10px 30px 10px);
-    clip-path: inset(30px 10px 30px 10px); */
 }
 
 .card.yellow img {
     width: 300px;
-}
-
-card.text {
-    font-weight: 400;
-    font-size: 14px;
 }
 
 .nested-item {
@@ -179,11 +205,19 @@ button {
     padding: 12px 18px 12px 18px;
 }
 
-.badge {
-    background-color: #dc3545;
+.badge,
+.card-text span.badge {
     border-radius: 25px;
     padding: 4px;
     font-weight: 600;
     font-size: 8px;
     margin-left: 4px;
+}
+
+.badge.red {
+    background-color: #dc3545;
+}
+
+.badge.blue {
+    background-color: #0e0af9;
 }
